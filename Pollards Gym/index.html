@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----- Styling ---->
+    <!---- font awesome ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  CSS stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home | Pollards Gym</title>
+
+    
+</head>
+
+
+<body>
+
+
+    <!-- Page header -->
+    <!-- W3Schools(n.d) -->
+         <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a id="activePage" href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="aboutUs.html">About us</a>
+            <a href="findUs.html">Find us</a>
+            <a href="classes.html">Classes</a>
+            <a href="testimonials.html">Testimonials</a>
+          </div>
+
+          <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <img class="LogoTop" src="images/Logo4.png">          
+
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+
+
+
+
+          <center><h1>Home page</h1></center>
+
+
+          <!--page related content-->
+
+    <!-- Slide show -->
+    <div class="slidercontainer">
+        <!-- first image -->
+        <!-- Winegeart(2020) -->
+        <div class="showSlide fade">
+            <img src="images/pic07.jpg" />
+        </div>
+
+        <!-- second image -->
+        <!-- Water(2021) -->
+        <div class="showSlide fade">
+            <img src="images/pic16.jpg" />
+        </div>
+
+        <!-- third image -->
+        <!-- Borba(2019) -->
+        <div class="showSlide fade">
+            <img src="images/pic15.jpg" />
+        </div>
+        <!-- Navigation arrows -->
+        <a class="left" onclick="nextSlide(-1)"><</a>
+        <a class="right" onclick="nextSlide(1)">></a>
+        </div>
+
+        <!--  Membership options  -->
+        <div class="memberships">
+            <div>
+                <center>
+                <h3>12 Months Contract</h3>
+                <p>£28.99/month</p>
+                </center>
+            </div>
+
+            <div>
+                <center>
+                <h3>Day pass</h3>
+                <p>
+                    £7/Day
+                    <br/>
+                    Pass terminates on exit
+                </p>
+                </center>
+            </div>
+        </div>
+
+
+    <!-- 4 column hyperlink grid -->
+    <div class="hyperlinks">
+        <article class="hyperlink">
+            <!-- Mars (2018) -->
+            <a href="classes.html"
+                onmouseover="rollover('image01','images/Hyperlink1')"
+                onmouseout="rollover('image01','images/pic07.jpg')">
+            <img name = "image01" src="images/pic08.jpg"alt="Home page"/></a>
+        </article>
+
+        <article class="hyperlink">
+            <!-- Carswell (2018) -->
+            <a href="gallery.html"
+                onmouseover="rollover('image02','images/Hyperlink2.jpg')"
+                onmouseout="rollover('image02','images/pic09.jpg')">
+            <img name="image02" src="images/pic09.jpg"alt="Gallery page"/></a>
+        </article>
+
+        <article class="hyperlink">
+            <!-- Maragos (2020) -->
+            <a href="aboutUs.html"
+            onmouseover="rollover('image03','images/Hyperlink3.jpg')"
+            onmouseout="rollover('image03','images/pic09.jpg')">
+            <img name="image03" src="images/pic01.jpg"alt="About Us page"/></a>
+        </article>
+
+        <article class="hyperlink">
+            <!--  -->
+            <a href="findUs.html"
+                onmouseover="rollover('image04','images/Hyperlink4.jpg')"
+                onmouseout="rollover('image04','images/pic11.jpg')">
+            <img name="image04" src="images/pic02.jpg"alt="Find Us page"/></a>
+        </article>
+    </div>
+
+
+
+<!-- Page footer content -->
+<footer>
+    <p id="trademark">© 2021 Pollards Gym Wakefield</p>
+    <a href="index.html"><img  class="LogoBottom" src="images/Logo4.png"></a>
+    <div id="socialMedia">
+        <a href="https://www.instagram.com/"><img  class="socialMedia" src="images/pic04.png"></a>
+        <a href="https://en-gb.facebook.com/"><img  class="socialMedia" src="images/pic06.png"></a>
+        <a href="https://twitter.com/?lang=en-gb"><img  class="socialMedia" src="images/pic05.png"></a>
+    </div>
+</footer>
+
+   
+    
+
+
+    <!-- Java Script sheet -->
+    <script src="script.js"></script>
+
+    <!-- JavaScript for slider -->
+    <script type="text/javascript">
+    var slide_index = 1;
+    displaySlides(slide_index);
+    function nextSlide(n) {
+        displaySlides(slide_index += n);
+    }
+    function currentSlide(n) {
+        displaySlides(slide_index = n);
+    }
+    function displaySlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("showSlide");
+        if (n > slides.length) { slide_index = 1}
+        if (n < 1) { slide_index = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slide_index - 1].style.display = "block";
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----- Styling ---->
+    <!---- font awesome ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  CSS stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Booking | Pollards Gym</title>
+</head>
+
+
+
+    <!-- Page header -->
+    <!-- W3Schools(n.d) -->
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="aboutUs.html">About us</a>
+            <a href="findUs.html">Find us</a>
+            <a href="classes.html">Classes</a>
+            <a href="testimonials.html">Testimonials</a>
+          </div>
+
+          <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <img class="LogoTop" src="images/Logo4.png">
+
+
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+
+          <!--page related content-->
+
+
+
+    <center><h1>Book now</h1></center>
+
+    <form class="bookingForm">
+      <div class="bookingInput">
+        <p>First name:                   </p>
+        <input type="text" name="firstName"></input>
+      </div>
+
+      <div class="bookingInput">
+        <p>Surname: </p>
+        <input type="text" name="surname"></input>
+      </div>
+
+      <div class="bookingInput">
+        <p>Email address: </p>
+        <input type="email" name="email"></input>
+      </div>
+
+      <!--  Seetha(2018)  -->
+      <div class="bookingInput">
+        <p>Class name: </p>
+        <select name="classes">
+          <option value="HIIT" selected>HIIT</option>
+          <option value="fitCycle" selected>Fit Cycle</option>
+          <option value="legsBumsAndTums" selected>Legs, Bums and Tums</option>
+          <option value="danceFit" selected>Dance Fit</option>
+          <option value="fitPump" selected>Fit Pump</option>
+          <option value="circuits" selected>Circuits</option>
+          </select>
+      </div>
+
+      <div class="bookingInput">
+        <p>Date: </p>
+        <input type="date" name="bookingDate"></input>
+      </div>
+
+      <div class="bookingInput">
+        <p>Time: </p>
+        <input type="time" name="bookingTime"></input>
+      </div>
+      <br/>
+      <button
+      onclick="alert('Booking successful!')"
+      id="bookClass" type="submit">Book</button>
+    </form>
+
+<!-- Page footer content -->
+<footer>
+  <p id="trademark">© 2021 Pollards Gym Wakefield</p>
+  <a href="index.html"><img  class="LogoBottom" src="images/Logo4.png"></a>
+  <div id="socialMedia">
+      <a href="https://www.instagram.com/"><img  class="socialMedia" src="images/pic04.png"></a>
+      <a href="https://en-gb.facebook.com/"><img  class="socialMedia" src="images/pic06.png"></a>
+      <a href="https://twitter.com/?lang=en-gb"><img  class="socialMedia" src="images/pic05.png"></a>
+  </div>
+</footer>
+
+
+    <!-- Java Script sheet -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>

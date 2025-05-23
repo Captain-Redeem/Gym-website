@@ -1,0 +1,537 @@
+/*Template for pages*/
+
+/* Regular Spartan Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Spartan:wght@400;800&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+body
+{
+    font-family: 'Spartan', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    background-color: #be9e44;
+    color: #1a1a1a;
+    height: 100%;
+    width: 100%;
+}
+
+table{
+  border-radius: 5px;
+}
+
+.LogoTop
+{
+  position: fixed;
+  top: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15%;
+}
+
+.LogoBottom
+{
+  height: 100%;
+}
+
+.socialMedia
+{
+  margin: 5px;
+  height: 100%;
+}
+
+#socialMedia
+{
+  position: relative;
+  right: 0px;
+  height: 85%;
+  float: right;
+}
+
+footer
+{
+  margin-top: 5px;
+  height: 60px;
+  padding: 5px;
+  background-color: #1a1a1a;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+}
+
+#trademark
+{
+  color: white;
+  position: absolute;
+  left: 0px;
+}
+
+button{
+  background-color: #d8c690;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+
+/* customise the nav bar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-size: 25px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #d8c690;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  height: 100%;
+}
+
+.openbtn:hover {
+  background-color: transparent;
+  color: #d8c690;
+}
+
+#main {
+  height: 15%;
+  width: 100%;
+  transition: margin-left .5s;
+  position: fixed;
+  top: 0;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: row;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+#activePage{
+  color: #be9e44;
+}
+
+
+
+
+
+
+
+/*Home page*/
+/* Slider styling */
+.showSlide {
+  display: none;
+}
+
+  .showSlide img {
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+.slidercontainer {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.left, .right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.right {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+  .left:hover, .right:hover {
+    background-color: #be9e44;
+  }
+
+  .content {
+    color: #fff;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+
+  /* fading transition */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* hyperlinks on homepage */
+  .hyperlinks{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    border-color: #1a1a1a;
+    width: 95%;
+  }
+
+  .hyperlink{
+    border-radius: 10px 10px 10px 10px;
+    margin: 5px;
+    width: 25%;
+    height: 255%;
+    padding: 5px;
+  }
+
+  .hyperlink img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+
+
+
+/*   Membership section */
+
+.memberships{
+  display: flex;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 95%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.memberships div{
+  border: 1px solid #be9e44;
+  border-radius: 5px;
+  width: 100%;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* Find us Page*/
+  .address{
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    height: 6%;
+    padding: 10px;
+  }
+
+  .map{
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+  
+  /* Gallery page */
+  /*
+Turn the container into a flexbox
+This will make everything in the div box appear horizontally
+*/
+.container{
+  display:flex;
+  width:90vw;
+}
+
+.panel{
+  /*
+  Change background-size:coer; to preserve rounded corner on larger screens
+  */
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:80vh;
+  border-radius: 50px;
+  color:#ffff;
+  cursor:pointer;
+  
+  /*
+  sets height for all to be the same.
+  but when we style the active panel, we will set this to a much higher value. 
+  */
+  flex:0.5;
+
+  margin:10px;
+  position:relative;
+  transition:flex 0.7s eas-in;
+}
+
+.panel h3{
+  font-size: 24px;
+  position: absolute;
+  top:20px;
+  left:20px;
+  margin:0;
+
+  /*
+  makes the H3 titles invisible until the image is clicked on
+  */
+  opacity:0;
+  text-align: center;
+}
+
+.panel p{
+  font-size: 24px;
+  position: absolute;
+  bottom:20px;
+  left:20px;
+  margin:0;
+
+  /*
+  makes the p description invisible until the image is clicked on
+  */
+  opacity:0;
+  width: 100%;
+  text-align: center;
+}
+
+.panel.active{
+  flex:5;
+  background-color: transparent;
+}
+
+panel.active.h3, panel.active.p{
+  opacity:1;
+}
+
+/*
+for smaller screens
+*/
+@media(max-width:480px)
+{
+  .container{
+      width:100vw;
+  }
+
+  .panel:nth-of-type(4), .panel:nth-of-type(5){
+      display:none;
+  }
+}
+
+
+
+
+
+
+
+
+/* About us page */
+.trainer{
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 80%;
+}
+
+.trainerDescription{
+  display: flex;
+  flex-direction: column;
+}
+
+.trainer img{
+  border-radius: 5px;
+}
+
+@media screen and (max-height: 450px) {
+  .trainer{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/* Classes page */
+.timings
+{
+  background-color:#1a1a1a;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+.classesTimetable
+{
+  background-color:#1a1a1a;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+
+table, th, td {
+  border: 5px solid #1a1a1a;
+  border-collapse: collapse;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+th, td{
+  width: 200px;
+  border: solid 1px white;
+}
+
+
+
+/* Booking page */
+.bookingForm{
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 5px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+
+.bookingInput{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+
+
+/* Testimonials */
+#Testimonials{
+  display: flex;
+  flex-direction: column;
+}
+.Testimonial {
+  border: 2px solid #d8c690;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
+  color: white;
+  width: 50vw;
+}
+
+.Testimonial::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.Testimonial img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.Testimonial span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .Testimonial {
+      text-align: center;
+  }
+  .Testiminial img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
